@@ -2,26 +2,21 @@
   "name": "backend-site-dev",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --watch index.ts"
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
   },
   "keywords": [],
-  "author": "Alan Campos",
+  "author": "",
   "license": "ISC",
-  "type": "module",
-  "devDependencies": {
-    "@types/express": "^5.0.6",
-    "@types/node": "^25.9.1",
-    "prisma": "6.19",
-    "tsx": "^4.22.3",
-    "typescript": "^6.0.3"
-  },
   "dependencies": {
-    "@prisma/client": "6.19",
+    "@prisma/client": "^6.19.3",
+    "bcryptjs": "^3.0.3",
     "dotenv": "^17.4.2",
-    "express": "^5.2.1",
-    "mongodb": "^7.2.0"
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.3",
+    "prisma": "^6.19.3"
   }
 }
