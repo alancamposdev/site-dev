@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Syne:wght@400;600;700;800&display=swap");
+
+:root {
+  --color-bg: #090d0f;
+  --color-text: #c8d8e0;
+  --color-text-muted: #55707a;
+  --color-surface: #0e1417;
+  --color-accent: #00ff88;
+  --color-accent-dim: #00cc6a;
+  --color-border: rgba(255, 255, 255, 0.07);
+  --color-error: #ff6b74;
+  --color-success: #33d98b;
+  --color-disabled: rgba(255, 255, 255, 0.08);
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+
+  --font-mono: "JetBrains Mono", monospace;
+
+  --header-height: 6rem;
+}

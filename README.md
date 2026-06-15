@@ -1,6 +1,6 @@
 # Meu Site
 
-## Frontend - React ViteJS + TS
+## Frontend - HTML, CSS e JS Vanilla
 
 ## Backend RESTFull - NodeJS + Express + mongoDB + Prisma
 
