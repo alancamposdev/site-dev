@@ -1,0 +1,29 @@
+/* Terms checkbox + link */
+.terms {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 1rem 0;
+  color: var(--color-text-muted);
+}
+
+.checkbox-input {
+  width: 10px;
+  height: 10px;
+  accent-color: var(--color-accent);
+}
+
+.checkbox-label {
+  color: var(--color-text);
+  font-size: x-small;
+}
+
+.terms-link {
+  color: var(--color-accent);
+}
+
+.terms-link:hover {
+  color: var(--color-accent-dim);
+  text-underline-offset: 3px;
+  text-decoration: underline;
+}
