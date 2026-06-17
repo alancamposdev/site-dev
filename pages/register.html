@@ -1,121 +1,94 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registrar</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
-      integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/pages/auth.css" />
 
-    <script type="module" src="../js/components/Footer.js"></script>
-    <script src="../js/main.js" defer></script>
-  </head>
-  <body>
-    <main id="register" class="auth">
-      <section class="container auth__container">
-        <button
-          id="themeToggle"
-          class="theme-toggle"
-          aria-label="Alternar tema"
-          title="Tema"
-        >
-          <i class="ri-moon-line"></i>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+    integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/pages/auth.css">
+
+  <script type="module" src="../js/components/Footer.js"></script>
+  <script src="../js/main.js" defer></script>
+</head>
+
+<body>
+  <main id="register" class="auth">
+    <section class="container auth__container">
+      <button id="themeToggle" class="theme-toggle" aria-label="Alternar tema" title="Tema">
+        <i class="ri-moon-line"></i>
+      </button>
+
+      <h1 class="auth__title">Criar Conta</h1>
+
+      <form id="registerForm" novalidate class="auth__form">
+        <div class="auth__group">
+          <input type="email" id="email" class="form-input auth__input" placeholder=" "
+            aria-describedby="emailHelp emailError">
+
+          <label for="email" class="form-label auth__label"> E-mail </label>
+
+          <small id="emailHelp" class="help-text auth__help">
+            Informe um e-mail válido.
+          </small>
+
+          <div id="emailError" class="auth__error"></div>
+        </div>
+
+        <div class="auth__group">
+          <input type="password" id="password" class="form-input auth__input" placeholder=" "
+            aria-describedby="passwordHelp passwordError">
+
+          <label for="password" class="form-label auth__label"> Senha </label>
+
+          <small id="passwordHelp" class="help-text auth__help">
+            Mínimo de 8 caracteres.
+          </small>
+
+          <div id="passwordError" class="auth__error"></div>
+        </div>
+
+        <div class="auth__group">
+          <input type="password" id="passwordConfirm" class="form-input auth__input" placeholder=" "
+            aria-describedby="passwordHelp passwordError">
+          <label for="passwordConfirm" class="form-label auth__label">
+            Confirme a Senha
+          </label>
+
+          <small id="" class="help-text auth__help">
+            Mínimo de 8 caracteres.
+          </small>
+
+          <div id="passwordError" class="error auth__error"></div>
+        </div>
+
+        <div class="auth__terms">
+          <input type="checkbox" id="agreeTerms" class="auth__checkbox">
+          <label for="agreeTerms" class="auth__checkbox-label">
+            Li e concordo com os
+            <a href="terms.html" class="auth__terms-link" target="_blank" rel="noopener">Termos de Serviço</a>
+          </label>
+        </div>
+
+        <button type="submit" id="submitBtn" class="auth__btn" disabled>
+          Entrar
         </button>
 
-        <h1 class="auth__title">Criar Conta</h1>
+        <div id="successMessage" class="auth__success"></div>
 
-        <form id="registerForm" novalidate class="auth__form">
-          <div class="auth__group">
-            <input
-              type="email"
-              id="email"
-              class="form-input auth__input"
-              placeholder=" "
-              aria-describedby="emailHelp emailError"
-            />
+        <footer class="auth__footer">
+          <p>
+            Ja possui uma conta?
+            <a href="./login.html" class="auth-footer__link">Acessar conta</a>
+          </p>
+        </footer>
+      </form>
+    </section>
+  </main>
+  <ac-footer></ac-footer>
+</body>
 
-            <label for="email" class="form-label auth__label"> E-mail </label>
-
-            <small id="emailHelp" class="help-text auth__help">
-              Informe um e-mail válido.
-            </small>
-
-            <div id="emailError" class="auth__error"></div>
-          </div>
-
-          <div class="auth__group">
-            <input
-              type="password"
-              id="password"
-              class="form-input auth__input"
-              placeholder=" "
-              aria-describedby="passwordHelp passwordError"
-            />
-
-            <label for="password" class="form-label auth__label"> Senha </label>
-
-            <small id="passwordHelp" class="help-text auth__help">
-              Mínimo de 8 caracteres.
-            </small>
-
-            <div id="passwordError" class="auth__error"></div>
-          </div>
-
-          <div class="auth__group">
-            <input
-              type="password"
-              id="passwordConfirm"
-              class="form-input auth__input"
-              placeholder=" "
-              aria-describedby="passwordHelp passwordError"
-            />
-            <label for="passwordConfirm" class="form-label auth__label">
-              Confirme a Senha
-            </label>
-
-            <small id="passwordHelp" class="help-text auth__help">
-              Mínimo de 8 caracteres.
-            </small>
-
-            <div id="passwordError" class="error auth__error"></div>
-          </div>
-
-          <div class="auth__terms">
-            <input type="checkbox" id="agreeTerms" class="auth__checkbox" />
-            <label for="agreeTerms" class="auth__checkbox-label">
-              Li e concordo com os
-              <a
-                href="terms.html"
-                class="auth__terms-link"
-                target="_blank"
-                rel="noopener"
-                >Termos de Serviço</a
-              >
-            </label>
-          </div>
-
-          <button type="submit" id="submitBtn" class="auth__btn" disabled>
-            Entrar
-          </button>
-
-          <div id="successMessage" class="auth__success"></div>
-
-          <footer class="auth__footer">
-            <p>
-              Ja possui uma conta?
-              <a href="./login.html" class="auth-footer__link">Acessar conta</a>
-            </p>
-          </footer>
-        </form>
-      </section>
-    </main>
-    <ac-footer></ac-footer>
-  </body>
 </html>
