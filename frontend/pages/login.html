@@ -1,110 +1,87 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Página de acesso" />
-    <meta name="author" content="Alan Campos" />
-    <meta name="keywords" content="palavra-chave1, palavra-chave2" />
-    <link rel="icon" type="image/x-icon" href="../assets/icons/" />
-    <title>Alan Campos | Login</title>
 
-    <!-- CSS externo -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
-      integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/pages/auth.css" />
-    <!-- Favicon e Titulo-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Página de acesso">
+  <meta name="author" content="Alan Campos">
+  <meta name="keywords" content="palavra-chave1, palavra-chave2">
+  <link rel="icon" type="image/x-icon" href="../assets/icons/">
+  <title>Alan Campos | Login</title>
 
-    <!-- JS externo  -->
-    <script type="module" src="../js/components/Footer.js"></script>
-    <script src="../js/main.js" defer></script>
-    <script src="../js/login.js" defer></script>
-  </head>
-  <body>
-    <main id="login" class="auth">
-      <section class="container auth__container">
-        <button
-          id="themeToggle"
-          class="theme-toggle"
-          aria-label="Alternar tema"
-          title="Tema"
-        >
-          <i class="ri-moon-line"></i>
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+    integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/pages/auth.css">
+  <!-- Favicon e Titulo-->
+
+  <!-- JS externo  -->
+  <script type="module" src="../js/components/Footer.js"></script>
+  <script src="../js/main.js" defer></script>
+  <script src="../js/login.js" defer></script>
+</head>
+
+<body>
+  <main id="login" class="auth">
+    <section class="container auth__container">
+      <button id="themeToggle" class="theme-toggle" aria-label="Alternar tema" title="Tema">
+        <i class="ri-moon-line"></i>
+      </button>
+
+      <h1 class="login-title auth__title">Acessar</h1>
+
+      <form id="loginForm" novalidate class="auth__form">
+        <div class="form-group auth__group">
+          <input type="email" id="email" class="form-input auth__input" placeholder=" "
+            aria-describedby="emailHelp emailError">
+
+          <label for="email" class="form-label auth__label"> E-mail </label>
+
+          <small id="emailHelp" class="help-text auth__help">
+            Informe um e-mail válido.
+          </small>
+
+          <div id="emailError" class="error auth__error"></div>
+        </div>
+
+        <div class="form-group auth__group">
+          <input type="password" id="password" class="form-input auth__input" placeholder=" "
+            aria-describedby="passwordHelp passwordError">
+
+          <label for="password" class="form-label auth__label"> Senha </label>
+
+          <small id="passwordHelp" class="help-text auth__help">
+            Mínimo de 8 caracteres.
+          </small>
+
+          <div id="passwordError" class="error auth__error"></div>
+        </div>
+
+        <button type="submit" id="submitBtn" class="auth__btn" disabled>
+          Entrar
         </button>
 
-        <h1 class="login-title auth__title">Acessar</h1>
+        <div id="successMessage" class="success auth__success"></div>
 
-        <form id="loginForm" novalidate class="auth__form">
-          <div class="form-group auth__group">
-            <input
-              type="email"
-              id="email"
-              class="form-input auth__input"
-              placeholder=" "
-              aria-describedby="emailHelp emailError"
-            />
+        <footer class="login-footer auth__footer">
+          <p>
+            Ainda não tem uma conta?
+            <a href="register.html" class="login-footer__link auth__footer__link">Criar conta</a>
+          </p>
+          <p>
+            <a href="#" class="login-footer__link auth__footer__link">Esqueceu a senha?</a>
+          </p>
+        </footer>
+      </form>
+    </section>
+  </main>
 
-            <label for="email" class="form-label auth__label"> E-mail </label>
+  <ac-footer></ac-footer>
 
-            <small id="emailHelp" class="help-text auth__help">
-              Informe um e-mail válido.
-            </small>
-
-            <div id="emailError" class="error auth__error"></div>
-          </div>
-
-          <div class="form-group auth__group">
-            <input
-              type="password"
-              id="password"
-              class="form-input auth__input"
-              placeholder=" "
-              aria-describedby="passwordHelp passwordError"
-            />
-
-            <label for="password" class="form-label auth__label"> Senha </label>
-
-            <small id="passwordHelp" class="help-text auth__help">
-              Mínimo de 8 caracteres.
-            </small>
-
-            <div id="passwordError" class="error auth__error"></div>
-          </div>
-
-          <button type="submit" id="submitBtn" class="auth__btn" disabled>
-            Entrar
-          </button>
-
-          <div id="successMessage" class="success auth__success"></div>
-
-          <footer class="login-footer auth__footer">
-            <p>
-              Ainda não tem uma conta?
-              <a
-                href="register.html"
-                class="login-footer__link auth__footer__link"
-                >Criar conta</a
-              >
-            </p>
-            <p>
-              <a href="#" class="login-footer__link auth__footer__link"
-                >Esqueceu a senha?</a
-              >
-            </p>
-          </footer>
-        </form>
-      </section>
-    </main>
-
-    <ac-footer></ac-footer>
-
-    <!-- <footer class="footer">
+  <!-- <footer class="footer">
       <div class="footer__container">
         <hr class="footer__divider" /> 
        
@@ -163,5 +140,7 @@
         </div>
       </div>
     </footer> 
-  --></body>
+  -->
+</body>
+
 </html>
