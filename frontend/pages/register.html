@@ -25,7 +25,20 @@
       <h1 class="auth__title">Criar Conta</h1>
 
       <form id="registerForm" novalidate class="auth__form">
+
         <div class="auth__group">
+
+          <input type="text" id="fullName" class="auth__input" placeholder=" "
+            aria-describedby="fullNameHelp fullNameError">
+          <label for="fullName" class="auth__label"> Nome Completo </label>
+          <small id="fullNameHelp" class="auth__help">
+            Informe seu nome completo.
+          </small>
+          <div id="emailError" class="auth__error"></div>
+        </div>
+
+        <div class="auth__group">
+
           <input type="email" id="email" class="form-input auth__input" placeholder=" "
             aria-describedby="emailHelp emailError">
 
